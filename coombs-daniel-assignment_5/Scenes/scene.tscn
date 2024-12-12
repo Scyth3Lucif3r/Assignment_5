@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://nwwfonrtgyyn"]
+[gd_scene load_steps=9 format=3 uid="uid://nwwfonrtgyyn"]
 
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="1_w0ona"]
 [ext_resource type="Script" path="res://Scripts/Bouncer.cs" id="1_ysewg"]
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Rectangle.gd" id="2_hr2ce"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qr4pr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ou63"]
 
@@ -14,6 +17,19 @@
 [node name="Scene" type="Node2D"]
 
 [node name="Ball" type="Node2D" parent="."]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Ball"]
+position = Vector2(550, 585)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/RigidBody2D"]
+shape = SubResource("CircleShape2D_qr4pr")
+metadata/_edit_lock_ = true
+
+[node name="Ellipse" type="Node2D" parent="Ball/RigidBody2D"]
+script = ExtResource("1_w0ona")
+size = Vector2(20, 20)
+fill_color = Color(0, 1, 1, 1)
+metadata/_edit_lock_ = true
 
 [node name="Bouncer" type="Node2D" parent="."]
 script = ExtResource("1_ysewg")
@@ -30,6 +46,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.960784, 0.415686, 0.52549, 1)
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="Node2D" parent="."]
@@ -96,6 +113,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 2" type="StaticBody2D" parent="Bricks/Row 1"]
@@ -110,6 +128,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 3" type="StaticBody2D" parent="Bricks/Row 1"]
@@ -124,6 +143,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 4" type="StaticBody2D" parent="Bricks/Row 1"]
@@ -138,6 +158,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 5" type="StaticBody2D" parent="Bricks/Row 1"]
@@ -152,6 +173,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 6" type="StaticBody2D" parent="Bricks/Row 1"]
@@ -166,6 +188,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 7" type="StaticBody2D" parent="Bricks/Row 1"]
@@ -180,6 +203,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Row 2" type="Node2D" parent="Bricks"]
@@ -197,6 +221,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 2" type="StaticBody2D" parent="Bricks/Row 2"]
@@ -211,6 +236,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 3" type="StaticBody2D" parent="Bricks/Row 2"]
@@ -225,6 +251,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 4" type="StaticBody2D" parent="Bricks/Row 2"]
@@ -239,6 +266,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 5" type="StaticBody2D" parent="Bricks/Row 2"]
@@ -253,6 +281,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 6" type="StaticBody2D" parent="Bricks/Row 2"]
@@ -267,6 +296,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 7" type="StaticBody2D" parent="Bricks/Row 2"]
@@ -281,6 +311,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Row 3" type="Node2D" parent="Bricks"]
@@ -298,6 +329,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 2" type="StaticBody2D" parent="Bricks/Row 3"]
@@ -312,6 +344,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 3" type="StaticBody2D" parent="Bricks/Row 3"]
@@ -326,6 +359,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 4" type="StaticBody2D" parent="Bricks/Row 3"]
@@ -340,6 +374,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 5" type="StaticBody2D" parent="Bricks/Row 3"]
@@ -354,6 +389,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 6" type="StaticBody2D" parent="Bricks/Row 3"]
@@ -368,6 +404,7 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="Brick 7" type="StaticBody2D" parent="Bricks/Row 3"]
@@ -382,4 +419,5 @@ metadata/_edit_lock_ = true
 script = ExtResource("2_hr2ce")
 size = Vector2(20, 20)
 corner_radius = 0.0
+fill_color = Color(0.356863, 0, 1, 1)
 metadata/_edit_lock_ = true
