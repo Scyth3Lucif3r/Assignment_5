@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="1_w0ona"]
 [ext_resource type="Script" path="res://Scripts/Bouncer.cs" id="1_ysewg"]
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Rectangle.gd" id="2_hr2ce"]
+[ext_resource type="Script" path="res://Scripts/Remover.cs" id="4_lfeyh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qr4pr"]
 
@@ -435,3 +436,5 @@ metadata/_edit_lock_ = true
 position = Vector2(5, 3)
 shape = SubResource("RectangleShape2D_r1iry")
 metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="Ball Remover/Remover" to="Ball Remover/Remover" method="OnBodyEntered"]
